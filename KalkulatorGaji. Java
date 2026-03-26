@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class KalkulatorGaji {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("--- Program Hitung Gaji Bersih ---");
+        System.out.print("Masukkan Gaji Pokok: ");
+        double gajiPokok = input.nextDouble();
+
+        // Bonus 10% dari gaji pokok
+        double bonus = 0.1 * gajiPokok;
+        // Pajak 5% dari gaji pokok
+        double pajak = 0.05 * gajiPokok;
+
+        double gajiBersih = gajiPokok + bonus - pajak;
+
+        System.out.println("Bonus (10%): Rp " + bonus);
+        System.out.println("Pajak (5%): Rp " + pajak);
+        System.out.println("Total Gaji Bersih: Rp " + gajiBersih);
+    }
+}
